@@ -11,45 +11,64 @@ function App() {
   const [notes, setNotes] = useState([]);
   const [get, setget] = useState(false);
   const [createnote, setcreatenote] = useState({title : "", content : ""});
-  useEffect(()=>
-  {
-    axios.get(url2)
-  .then(res=> { 
-      setNotes(res.data)
-  })
-  .catch(err => {console.log(err)});
-  },[get])  
-  
-  function addNote(newNote) {
-    const t = notes.filter((noteItem) => {
-      return noteItem._id === newNote._id;
-    })[0]
-    if(t)
+   useEffect(  ()=>
+  { 
+    async function getdata()
     {
-      axios.post(url2 + "update/" + newNote._id, newNote)
-       .then(res=> setget(!get));
+      try {
+        const res = await axios.get(url2);
+        setNotes(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    } 
+    getdata();
+  },[get])
+async function addNote(newNote) {
+    try {
+      const t = notes.filter((noteItem) => {
+        return noteItem._id === newNote._id;
+      })[0]
+      if(t)
+      {
+        var res1 = await axios.post(url2 + "update/" + newNote._id, newNote);
+        console.log(res1.data);
+        setget(!get);
+      }
+      else{
+        var res2 = await axios.post(url1,newNote);
+        console.log(res2.data);
+        setget(!get);
+        
+     }
+    } catch (error) {
+      console.log(error);
     }
-    else{
-      axios.post(url1,newNote)
-      .then(res=> setget(!get));
-      
-   }
   }
 
-  function deleteNote(id) {
-    axios.delete(url2 + id)
-     .then(res => setget(!get))
+async function deleteNote(id) {
+     try {
+       const res = await axios.delete(url2 + id);
+       console.log(res.data);
+       setget(!get);
+     } catch (error) {
+       console.log(error);
+     }
     
   }
   
   function updateNote(id)
   {
-    const t = notes.filter((noteItem) => {
-      return noteItem._id === id;
-    })[0]
-      setcreatenote(
-        t
-    )
+    try {
+      const t = notes.filter((noteItem) => {
+        return noteItem._id === id;
+      })[0]
+        setcreatenote(
+          t
+      )
+    } catch (error) {
+      console.log(error);
+    }
   } 
 
 
