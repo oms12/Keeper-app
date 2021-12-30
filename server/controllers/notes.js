@@ -3,12 +3,13 @@ import mongoose from "mongoose";
 
 import notemessage from "../models/note.js";
 
-
 const router = express.Router();
 
 export const getpost = (req,res)=>
 {
-   notemessage.find()
+   console.log(req.userId);
+
+   notemessage.find({userId : req.userId})
     .then(messages => res.json(messages))
     .catch(err => res.status(400).json({message : err.message}))
 }
@@ -19,7 +20,8 @@ export const createPost = async(req,res)=>
 {
    const title = req.body.title;
    const content = req.body.content;
-   const newPost = new notemessage({title, content});
+   const userId = req.userId; /// middle ware information.
+   const newPost = new notemessage({title, content ,userId});
    try {
       await newPost.save();
       res.status(201).json("Added");

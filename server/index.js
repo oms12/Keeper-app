@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 import bodyParser  from "body-parser";
 
 import postRoutes from "./routes/notes.js";
-
+import userRoutes from "./routes/users.js";
 dotenv.config();
 
 const app = express();
@@ -22,6 +22,7 @@ connection.once("open", () => {
 });
 
 app.use("/posts",postRoutes);
+app.use("/users",userRoutes);
 app.listen(3000,()=>{
   console.log("server started");
  });

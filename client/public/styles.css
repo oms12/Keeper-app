@@ -16,18 +16,29 @@ body {
 header {
   background-color: #0078b0;;
   background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
-   margin: auto -16px;
-  text-align: center;
-  padding: 16px 32px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  margin: 0 -16px;
+  display: flex;
+  padding: 1rem;
+  flex-direction: row;
 }
+.logout{
 
-header h1 {
+  padding-left: 85%;
+  padding-top: 5px;
+}
+.item {
   color: #fff;
   font-family: "McLaren", cursive;
+  font-size: 25px;
   font-weight: 200;
 }
-
+.item {
+  flex-grow: 1;
+  text-align: center; 
+}
+.item1{
+  margin-left: 6px;
+}
 footer {
   position: absolute;
   text-align: center;
@@ -104,3 +115,136 @@ form.create-note button {
   cursor: pointer;
   outline: none;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+
+.authenticaton {
+	display: block;
+	margin: auto;
+	margin-top: 6%;
+	width: 40%;
+	height: 70vh;
+}
+
+h1 {
+	font-weight: bold;
+	margin: 0;
+}
+
+h2 {
+	text-align: center;
+}
+h3 {
+	margin-top: 15px;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+span {
+	font-size: 12px;
+}
+
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+.link{
+  color: black;
+	font-size: 14px;
+	font-weight: bold;
+}
+a:hover {
+  color: red;
+  font-weight: bold;
+}
+.btn {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.btn:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
+.btn:active{
+	transform: scale(0.95);
+}
+
+.btn:focus  {
+	outline: none;
+}
+
+.btn:ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+.login-form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+
+.form-container {
+	position: absolute;
+	top: 0;
+    left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 100;
+}
+
+
+.social-container {
+	margin: 20px 0;
+}
+
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+
+
