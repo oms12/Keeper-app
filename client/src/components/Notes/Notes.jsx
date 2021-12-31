@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Note from "../Notes/Note";
 import CreateArea from "../Form/CreateArea";
 import axios from "axios";
-const url1 = "http://localhost:3000/posts/add";
-const url2 = "http://localhost:3000/posts/";
+const url1 = "https://gautam-keeper-app.herokuapp.com/posts/add";
+const url2 = "https://gautam-keeper-app.herokuapp.com/posts/";
 
 
 

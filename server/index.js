@@ -21,8 +21,14 @@ connection.once("open", () => {
 	console.log("MongoDB connection established successfully");
 });
 
+app.get("/",(req,res)=>
+{
+  res.send("Welcome to Keeper App Api");
+})
+
+
 app.use("/posts",postRoutes);
 app.use("/users",userRoutes);
-app.listen(3000,()=>{
+app.listen(process.env.PORT || 3000,()=>{
   console.log("server started");
  });
