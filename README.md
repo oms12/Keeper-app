@@ -1,5 +1,4 @@
 # Keeper-app
-# Complaint Management System 
 Keeper is a platform designed to manage our notes a better way. The process is very Simple, open the site, Register and login  and add your notes. :)
 You can add, update and delete the posts too.
 I have hosted our website on [Frontend Netlify and Backend Heroku ](https://gautam-keeper-app.netlify.app/)
