@@ -1,5 +1,5 @@
 import React from "react";
-import HighlightIcon from "@material-ui/icons/Highlight";
+//import CameraAltIcon from '@mui/icons-material/CameraAlt';
 function handlesubmit()
 {
   localStorage.removeItem("mytoken");
@@ -11,7 +11,6 @@ function Header() {
   return (
     <header>
       <div className="item item1" >
-        <HighlightIcon style={{ fontSize: 25 }} />
         Keeper
       </div>
       <div className="item item2">
