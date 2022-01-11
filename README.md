@@ -1,7 +1,7 @@
 # Keeper-app
 Keeper is a platform designed to manage our notes a better way. The process is very Simple, open the site, Register and login  and add your notes. :)
 You can add, update and delete the posts too.
-I have hosted our website on [Frontend Netlify and Backend Heroku ](https://gautam-keeper-app.netlify.app/)
+I have hosted my website on [Frontend Netlify and Backend Heroku ](https://gautam-keeper-app.netlify.app/)
 Please Open it in PC as it is not mobile responsive.
   
 ## Tech Stuff Used
